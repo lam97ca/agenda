@@ -85,7 +85,7 @@ def cargar_agenda(agenda_path, agenda):
 
     with open(agenda_path+'.txt', 'wt') as file:
         count = 0
-        for id, contenido in zip(agenda.keys(), agenda.values()):
+        for id, contenido in agenda.items():
             if count == 0:
                 id_tag = 'id:{}'.format(id)
                 count += 1
