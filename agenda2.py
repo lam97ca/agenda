@@ -69,7 +69,6 @@ def editar_contacto(agenda_path):
 	agenda = descargar_agenda(agenda_path)
 	if contacto_mod not in agenda:
 		print ('El contacto no existe, agreguelo desde el menu')
-		continue
 		#por si el contacto no esta agendado
 	for i in range(len(agenda)):
 	          if agenda[i][0] == nombre:
