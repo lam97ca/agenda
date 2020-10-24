@@ -202,4 +202,3 @@ def main():
 		            print("Esa opción no esta contemplada")
 		    print("Se cerro la agenda")
 		    print("Fin del programa, gracias por utilizar la agenda")
-main()
