@@ -156,53 +156,49 @@ def main():
     representar los contactos. """
     
     crear_si_no_existe('agenda.txt')
-    
-    while(True):
-    	print("Agenda telefónica básica")
-    	try:
-		    opcion=0
-		    agenda=descargar_agenda(agenda_path)
-		    while opcion != 6 :
-		        print("Elige una opcion:")
-		        print("1. Lista de contactos")
-		        print("2. Buscar contacto")
-		        print("3. Crear contactos")
-		        print("4. Borrar contacto")
-		        print("5. Editar contacto")
-		        print("6. Salir")
-		#Menu de la agenda
-		        opcion=input("Opcion:")
-		        if opcion == "1":
-		            print(agenda)
-		            time.sleep(4)
-		            #muestra agenda
-		        elif opcion== "2":
-		            bus_cont=input("Introduce nombre a buscar:")
-		            buscar(agenda, bus_cont)
-		            time.sleep(4)
-		            #busca contacto
-		        elif opcion== "3":
-		            crear_contacto(agenda_path)
-		            time.sleep(4)
-		            #crea contacto
-		        elif opcion== "4":
-		            eliminar_contacto (agenda_path)
-		            time.sleep(4)
-		            #elimina contacto
-		        elif opcion == "5":
-		        	editar_contacto(agenda_path)
-		        	time.sleep(4)
-		        	#edita contacto
-		        elif opcion == "6":
-		            print("He entrado en 6")   
-		            break
-		            #sale del menu
-		        else:
-		            print("Esa opción no esta contemplada")
-		    print("Se cerro la agenda")
-		    print("Fin del programa, gracias por utilizar la agenda")
-    	except:
-		pass
+    opcion=0
+    agenda=descargar_agenda(agenda_path)
+    while opcion != 6:
+      print("Agenda telefónica básica")
+      print("Elige una opcion")
+      print("1. Lista de contactos")
+      print("2. Buscar contacto")
+      print("3. Crear contacto")
+      print("4. Borrar contacto")
+      print("5. Editar contacto")
+      print("6. Salir")
+      #Menu de la agenda
+      opcion = input("Opcion: ")
+      if opcion == "1":
+          print(agenda)
+          time.sleep(4)
+          #muestra agenda
+      elif opcion == "2":
+          bus_cont=input("Introduce nombre a buscar:")
+          buscar(agenda, bus_cont)
+          time.sleep(4)
+          #busca contacto
+      elif opcion == "3":
+          crear_contacto(agenda_path)
+          time.sleep(4)
+          #crea contacto
+      elif opcion == "4":
+          eliminar_contactp(agenda_path)
+          time.sleep(4)
+          #eliminar contacto
+      elif opcion == "5":
+          editar_contacto(agenda_path)
+          time.sleep(4)
+          #editar contacto
+      elif opcion == "6":
+          print("Ha entrado en 6")
+          time.sleep(4)
+          break
+          #sale del menu
+      else:
+          print("Esa opcion no esta contemplada")
+      print("Se cerro la agenda")
+      print("Fin del programa, gracias por utilizar la agenda")
 	
 if __name__ == "__main__":
 	main()
